@@ -1,18 +1,54 @@
-# Salesforce DX Project: Next Steps
+# Enterprise Recruitment Management System
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+A Salesforce-based Recruitment Management System built using Apex, SOQL, Triggers, Async Apex, Approval Processes, Batch Apex, Reports, and Dashboards.
 
-## How Do You Plan to Deploy Your Changes?
+This project simulates a real-world recruitment workflow where companies can manage job openings, candidates, interviews, approvals, and hiring analytics through automated Salesforce processes.
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+---
 
-## Configure Your Salesforce DX Project
+# Features
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+## Candidate Management
+- Store candidate information
+- Track skills and experience
+- Maintain candidate hiring status
 
-## Read All About It
+---
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+## Job Opening Management
+- Manage job positions
+- Track department-wise openings
+- Define required experience
+
+---
+
+## Job Application Tracking
+- Candidates can apply for multiple jobs
+- Tracks application lifecycle
+- Implements many-to-many relationship architecture
+
+---
+
+# Recruitment Workflow Automation
+
+## Automatic Candidate Screening
+
+When a candidate applies:
+- If candidate experience matches required experience:
+  - Status becomes `Screening`
+- Otherwise:
+  - Status becomes `Rejected`
+
+Implemented using:
+- Apex Trigger
+- Trigger Handler Pattern
+- Cross-object SOQL
+- Bulkified Logic
+
+---
+
+## Interview Scheduling Automation
+
+When application status becomes:
+```text
+Interview Scheduled
